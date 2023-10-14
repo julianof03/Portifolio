@@ -1,21 +1,26 @@
 import styled from "styled-components";
 import { TecnologiesList } from "../Tecnologie";
-export default function Tecnologies(){
-    return( 
-    <TecnologiesDiv>
-        <h1>Tecnologias</h1>
-        
-        <div className="TecnologieList">{TecnologiesList.map((e) => { return (
-          <div className="TecnoligieDiv">
-            <img src={e.Image} alt={e.Image} className="image"/>
-            <p>{e.Tecnologie}</p>
-          </div>
-        ) })}
+export default function Tecnologies({ PopUp, SetPopUp }) {
 
-        </div>
-        <input type="button" value="Ver Mais"></input>
-      </TecnologiesDiv>);
-    
+
+  return (
+    <TecnologiesDiv>
+      <h1>Tecnologias</h1>
+      <div className="TecnologieList">{TecnologiesList.map((e, i) => {
+        return (
+          <button className="TecnoligieDiv" key={i}
+            onClick={() => { SetPopUp(e.PopUpCount) }}>
+            <img src={e.Image} alt={e.Image} className="image" />
+            <p>{e.Tecnologie}</p>
+          </button>
+        )
+      })}
+
+      </div>
+      <input type="button" value="Ver Mais"></input>
+    </TecnologiesDiv>
+  );
+
 }
 
 const TecnologiesDiv = styled.div`
@@ -55,6 +60,9 @@ const TecnologiesDiv = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    background-color:white;
+    border-style:none;
+    border-radius:5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 1px, rgba(0, 0, 0, 0.02) 0px 4px 2px, rgba(0, 0, 0, 0.02) 0px 8px 4px, rgba(0, 0, 0, 0.02) 0px 16px 8px, rgba(0, 0, 0, 0.02) 0px 32px 16px;
     :hover{
       cursor: pointer;
@@ -90,8 +98,8 @@ const TecnologiesDiv = styled.div`
     align-items:center;
     justify-content:center;
     color:#0C1630;
-    font-size:18px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    font-size:15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     :hover{
       cursor: pointer;
     }

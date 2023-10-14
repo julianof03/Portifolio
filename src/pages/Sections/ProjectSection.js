@@ -8,9 +8,9 @@ export default function Projects(){
         <ScrollContainer className="container">
             {ProjectList.map
               (
-                (e) => {
+                (e, i) => {
                   return (
-                    <div className="project">
+                    <div className="project" key={i}>
                       <img src={e.Image} alt="img" className="image"/>
                       <button className="OnHover">
                         {e.ProjectName}
@@ -24,20 +24,20 @@ export default function Projects(){
 }
 const ProjectsDiv = styled.div`
   margin-top:5vh;
-  padding-left:5vh;
   margin-bottom:250px;
+  width:100%;
   font-size:32px;
   font-weight:bold;
-  color:#892ec1;
+  color:#0B121D;
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
+  align-items:center;
   
   .container{
     display:flex;
     height:285px;
-    width:80%;
-    min-width:400px;
+    width:90%;
+    min-width:80px;
     border-width:5px;
     border-radius:5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -73,14 +73,13 @@ const ProjectsDiv = styled.div`
     justify-content:center;
     border-style:none;
     :hover{
-
       background-color: rgba(60,15,104,0.5);
-    color: rgba(235,223,242,1);
+      color: rgba(235,223,242,1);
     }
   }
   .OnHover:active{
     background-color: rgba(235,223,242,0.5);
-      color: rgba(60,15,104,1);
+    color: rgba(60,15,104,1);
   }
 
 `;

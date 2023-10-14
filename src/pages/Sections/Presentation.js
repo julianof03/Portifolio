@@ -20,11 +20,11 @@ const PresentationDiv = styled.div`
   font-weight:bold;
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
+  align-items:center;
 
   .Video{
     width:70%;
-    height:400px;
+    height:265px;
     max-height:560px;
     border-radius:15px;
     min-width:400px;

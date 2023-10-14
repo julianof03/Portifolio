@@ -3,32 +3,36 @@ import React from 'react';
 import Presentation from "./Sections/Presentation";
 import Tecnologies from "./Sections/TecnologieSection";
 import Projects from "./Sections/ProjectSection";
-
+import ProjectPopUp from "./Sections/ProjectPopUp";
+import About from "./Sections/About";
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [PopUp, SetPopUp] = useState(0);
   return (
     <AppContainer className="App">
       <Header></Header>
+      <About/>
       <Presentation/>
-      <About>
-        <p> Sobre Mim</p>
-      </About>
-     <Tecnologies/>
+      <ProjectPopUp
+          PopUp = {PopUp}
+          SetPopUp = {SetPopUp}
+      />  
+      <Tecnologies 
+        PopUp = {PopUp}
+        SetPopUp = {SetPopUp}
+      />
      <Projects/>
     </AppContainer>
   );
 }
 
 const AppContainer = styled.div`
-height:100%;
-width:100%;
-display:flex;
-flex-direction:column;
-.Whatsapp{
-  background-color:red;
-  height:10px;
-  width:10px;
-}
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 `;
 const Header = styled.div`
   width:100%;
@@ -36,14 +40,4 @@ const Header = styled.div`
   margin-top:-5vh;
   background-color:#892ec1;
   position: fixed;
-`;
-const About = styled.div`
-  font-size:32px;
-  margin-top:5vh;
-  padding-left:5vh;
-  font-weight:bold;
-  color:#0B121D;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
 `;
