@@ -11,9 +11,8 @@ export default function Home() {
   const [PopUp, SetPopUp] = useState(0);
   return (
     <AppContainer className="App">
-      <Header></Header>
       <About/>
-      <Presentation/>
+      {/* <Presentation/> */}
       <ProjectPopUp
           PopUp = {PopUp}
           SetPopUp = {SetPopUp}

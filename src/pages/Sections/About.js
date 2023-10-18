@@ -41,7 +41,7 @@ const AboutContainer = styled.div`
     flex-direction:column;
     align-items:center;
     background-color:#3497da;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    box-shadow: rgba(17, 12, 46, 0.05) 0px 48px 100px 0px;
     p{
         margin-left:25px;
     }

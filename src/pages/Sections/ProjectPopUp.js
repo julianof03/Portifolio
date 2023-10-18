@@ -7,7 +7,7 @@ export default function ProjectPopUp({ PopUp, SetPopUp }) {
         <PoPContainer>
                 <button className="ExitButton" type="button"
                     onClick={() => { SetPopUp(0) }}
-                ></button>
+                >l</button>
                 <div className="HtmlAndDescripition">
                     <img src={List.Image}/>
                     <p> {List.Description}</p>
@@ -25,12 +25,17 @@ export default function ProjectPopUp({ PopUp, SetPopUp }) {
 
 const PoPContainer = styled.div`
     display:flex;
+    z-index:1;
+    transition:1s;
     flex-direction:column;
     align-items:center;
     justify-content:start;
     position:fixed;
-    height:480px;
-    width:590px;
+    min-height:640px;
+    height:fit-content;
+    min-width:380px;
+    max-width:690px;
+    width:40%;
     top:20vh;
     color:black;
     background-color:white;
@@ -45,7 +50,7 @@ const PoPContainer = styled.div`
         display:flex;
         margin-top:55px;
         justify-content:space-around;
-        height:50%;
+        height:100%;
         font-size:18px;
         width:90%;
         p{
@@ -72,9 +77,11 @@ const PoPContainer = styled.div`
             color:white;
         }
         .ProjectButton{
-            height:35px;
-            width:85px;
+            height:40px;
+            width:98px;
             margin-top:35px;
+            font-size:16px;
+            font-weight:bold;
             background-color:white;
             border-radius:5px;
             border-style:none;
@@ -88,6 +95,7 @@ const PoPContainer = styled.div`
     .ExitButton{
     height:25px;
     width:25px;
+    color:wheat;
     font-size:12px;
     font-weight:bold;
     position:absolute;

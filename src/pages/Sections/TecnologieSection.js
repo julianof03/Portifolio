@@ -17,14 +17,13 @@ export default function Tecnologies({ PopUp, SetPopUp }) {
       })}
 
       </div>
-      <input type="button" value="Ver Mais"></input>
     </TecnologiesDiv>
   );
 
 }
 
 const TecnologiesDiv = styled.div`
-  width:80%;
+  width:100%;
   font-size:32px;
   margin-top:5vh;
   padding-left:5vh;
@@ -40,7 +39,7 @@ const TecnologiesDiv = styled.div`
     font-size:32px;
   }
   .TecnologieList{
-    width:100%;
+    width:150%;
     max-width:90%;
     min-width:400px;
     padding:0px;
@@ -51,15 +50,16 @@ const TecnologiesDiv = styled.div`
     flex-wrap:wrap;
   }
   .TecnoligieDiv{
-    width:20%;
+    width:80%;
+    height:200px;
     margin: 10px 10px 10px 10px;
     padding:10px 10px 10px 10px;
-    max-width:120px;
+    max-width:180px;
     min-width:80px;
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
+    justify-content:space-between;
     background-color:white;
     border-style:none;
     border-radius:5px;
@@ -72,8 +72,8 @@ const TecnologiesDiv = styled.div`
   p{
     height:30px;
     width:20%;
-    margin-top:5px;
-    font-size:15px;
+    font-size:18px;
+    font-weight:bold;
     border-radius:5px;
     display:flex;
     flex-direction:column;
@@ -84,8 +84,8 @@ const TecnologiesDiv = styled.div`
     }
   }
   img{
-    width:70px;
-    height:70px;
+    width:90px;
+    height:90px;
   }
   input{
     width:25%;
